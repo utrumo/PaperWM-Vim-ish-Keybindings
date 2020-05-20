@@ -54,13 +54,13 @@ PREV_BINDINGS=paperwm-bindings-$(date +%F_%T).txt
 dconf dump /org/gnome/shell/extensions/paperwm/keybindings/ > $PREV_BINDINGS
 
 # Download Vim-ish PaperWM Key Bindings
-wget https://raw.githubusercontent.com/trst/PaperWM-Vim-ish-Keybindings/master/paperwm-vim-ish-keybindings.txt
+wget https://raw.githubusercontent.com/utrumo/PaperWM-Vim-ish-Keybindings/master/paperwm-vim-ish-keybindings.txt
 
 # Reset PaperWM to default; Skip this if you haven't made any modifications
 dconf reset -f /org/gnome/shell/extensions/paperwm/keybindings/
 
 # Load Vim-ish PaperWM Key Bindings
-cat dwm-ish-bindings.txt | dconf load /org/gnome/shell/extensions/paperwm/keybindings/
+cat paperwm-vim-ish-keybindings.txt | dconf load /org/gnome/shell/extensions/paperwm/keybindings/
 ```
 
 ## Restore Your Previous Key Bindings
